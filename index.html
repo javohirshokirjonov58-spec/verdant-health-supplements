@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Verdant — Bioavailable Adaptogens & Cellular Longevity</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Plus Jakarta Sans', sans-serif; }
+  </style>
+</head>
+<body class="bg-[#0B150F] text-[#E7EFE9] antialiased selection:bg-emerald-500 selection:text-black">
+
+  <header class="sticky top-0 z-50 bg-[#0B150F]/90 backdrop-blur-md border-b border-emerald-950">
+    <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+      <div class="flex items-center gap-2">
+        <i data-lucide="leaf" class="w-6 h-6 text-emerald-400"></i>
+        <span class="text-2xl font-bold tracking-tight">VERDANT<span class="text-emerald-400">.</span></span>
+      </div>
+      <nav class="hidden md:flex items-center gap-8 text-xs font-semibold uppercase tracking-wider text-emerald-300/70">
+        <a href="#quiz" class="hover:text-emerald-400 transition">Formula Quiz</a>
+        <a href="#products" class="hover:text-emerald-400 transition">Supplements</a>
+        <a href="#science" class="hover:text-emerald-400 transition">Clinical Science</a>
+        <a href="#ingredients" class="hover:text-emerald-400 transition">Purity Standard</a>
+      </nav>
+      <a href="#products" class="px-5 py-2.5 rounded-full bg-emerald-500 hover:bg-emerald-400 text-black text-xs font-bold uppercase tracking-wider transition">
+        Shop Formulas
+      </a>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="py-24 max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
+    <div class="space-y-8">
+      <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-emerald-500/30 bg-emerald-500/10 text-emerald-400 text-xs font-semibold uppercase">
+        <span>●</span> 100% Certified Organic & Lab Tested
+      </div>
+      <h1 class="text-5xl sm:text-6xl font-extrabold tracking-tight leading-tight">
+        Precision cellular nutrition for <span class="text-emerald-400">vital human output.</span>
+      </h1>
+      <p class="text-emerald-200/70 text-base leading-relaxed max-w-lg">
+        Whole-plant bioavailable adaptogens, cold-extracted medicinal mushrooms, and standardized botanical actives engineered to restore homeostasis.
+      </p>
+      <div class="flex items-center gap-4 pt-2">
+        <a href="#quiz" class="px-8 py-3.5 rounded-full bg-emerald-500 hover:bg-emerald-400 text-black text-xs font-bold uppercase tracking-wider transition">Take Health Quiz</a>
+        <a href="#products" class="px-8 py-3.5 rounded-full border border-emerald-800 hover:border-emerald-600 text-xs font-bold uppercase tracking-wider transition">View All Stacks</a>
+      </div>
+    </div>
+    <div class="relative">
+      <div class="rounded-3xl overflow-hidden border border-emerald-900 bg-emerald-950/40">
+        <img src="https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&w=1000&q=80" alt="Herbal Supplement" class="w-full h-[480px] object-cover">
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive "Find Your Formula" Quiz -->
+  <section id="quiz" class="py-24 bg-[#0E1B13] border-y border-emerald-950">
+    <div class="max-w-3xl mx-auto px-6 text-center space-y-8">
+      <div>
+        <span class="text-xs font-mono uppercase text-emerald-400">Personalized Health Assessment</span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold mt-2">Find Your Target Supplement Formula</h2>
+        <p class="text-xs text-emerald-300/70 mt-1">Select your primary wellness priority for a targeted dosage.</p>
+      </div>
+
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
+        <button onclick="setQuizGoal('energy')" class="quiz-btn p-4 rounded-2xl border border-emerald-500 bg-emerald-500/20 text-emerald-300 text-xs font-bold flex flex-col items-center gap-2 transition" id="q-energy">
+          <i data-lucide="zap" class="w-5 h-5 text-emerald-400"></i>
+          <span>All-Day Energy</span>
+        </button>
+        <button onclick="setQuizGoal('sleep')" class="quiz-btn p-4 rounded-2xl border border-emerald-900 bg-emerald-950/50 text-emerald-300/60 text-xs font-bold flex flex-col items-center gap-2 transition" id="q-sleep">
+          <i data-lucide="moon" class="w-5 h-5"></i>
+          <span>Deep REM Sleep</span>
+        </button>
+        <button onclick="setQuizGoal('focus')" class="quiz-btn p-4 rounded-2xl border border-emerald-900 bg-emerald-950/50 text-emerald-300/60 text-xs font-bold flex flex-col items-center gap-2 transition" id="q-focus">
+          <i data-lucide="brain" class="w-5 h-5"></i>
+          <span>Neuro Focus</span>
+        </button>
+        <button onclick="setQuizGoal('immunity')" class="quiz-btn p-4 rounded-2xl border border-emerald-900 bg-emerald-950/50 text-emerald-300/60 text-xs font-bold flex flex-col items-center gap-2 transition" id="q-immunity">
+          <i data-lucide="shield-check" class="w-5 h-5"></i>
+          <span>Cell Immunity</span>
+        </button>
+      </div>
+
+      <div id="quizResult" class="p-8 rounded-3xl bg-[#0B150F] border border-emerald-800 text-left space-y-4">
+        <div class="flex justify-between items-start">
+          <div>
+            <span class="text-[11px] font-mono uppercase text-emerald-400" id="resTag">Recommended Daily Stack</span>
+            <h4 class="text-2xl font-bold mt-1" id="resTitle">Verdant Mitochondrial Surge™</h4>
+          </div>
+          <span class="text-xl font-mono font-bold text-emerald-400" id="resPrice">$48 / mo</span>
+        </div>
+        <p class="text-xs text-emerald-200/70" id="resDesc">Standardized Cordyceps Sinensis (CS-4), organic Rhodiola Rosea (3% salidrosides), and CoQ10 liposomal delivery system.</p>
+        <button onclick="alert('Added recommended formula to your cart with 20% subscribe discount!')" class="w-full py-3.5 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-black font-bold text-xs uppercase tracking-wider transition">
+          Claim 30-Day Starter Kit
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Product Catalog -->
+  <section id="products" class="py-24 max-w-7xl mx-auto px-6">
+    <div class="text-center max-w-xl mx-auto mb-16 space-y-3">
+      <span class="text-xs font-mono uppercase text-emerald-400">Clinical Formulations</span>
+      <h2 class="text-3xl sm:text-4xl font-extrabold">Standardized Botanical Stacks</h2>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-8">
+      <div class="p-6 rounded-3xl bg-[#0E1B13] border border-emerald-950 space-y-4">
+        <div class="h-64 rounded-2xl overflow-hidden bg-emerald-950/40">
+          <img src="https://images.unsplash.com/photo-1550572017-edd951aa8f72?auto=format&fit=crop&w=600&q=80" alt="Immune Complex" class="w-full h-full object-cover">
+        </div>
+        <div class="flex justify-between items-baseline">
+          <h3 class="text-lg font-bold">Seven-Mushroom Complex</h3>
+          <span class="font-mono text-emerald-400 font-bold">$42.00</span>
+        </div>
+        <p class="text-xs text-emerald-300/70">Lion's Mane, Reishi, Chaga, Maitake, Turkey Tail, Shiitake, and Tremella.</p>
+        <button onclick="alert('Added Seven-Mushroom Complex to cart!')" class="w-full py-2.5 rounded-xl border border-emerald-800 hover:bg-emerald-800/40 text-xs font-bold uppercase transition">Add to Order</button>
+      </div>
+
+      <div class="p-6 rounded-3xl bg-[#0E1B13] border border-emerald-950 space-y-4">
+        <div class="h-64 rounded-2xl overflow-hidden bg-emerald-950/40">
+          <img src="https://images.unsplash.com/photo-1616671285442-f67332c96c56?auto=format&fit=crop&w=600&q=80" alt="Ashwagandha" class="w-full h-full object-cover">
+        </div>
+        <div class="flex justify-between items-baseline">
+          <h3 class="text-lg font-bold">KSM-66® Pure Ashwagandha</h3>
+          <span class="font-mono text-emerald-400 font-bold">$38.00</span>
+        </div>
+        <p class="text-xs text-emerald-300/70">Clinical 600mg full-spectrum root extract for systemic cortisol reduction.</p>
+        <button onclick="alert('Added Ashwagandha to cart!')" class="w-full py-2.5 rounded-xl border border-emerald-800 hover:bg-emerald-800/40 text-xs font-bold uppercase transition">Add to Order</button>
+      </div>
+
+      <div class="p-6 rounded-3xl bg-[#0E1B13] border border-emerald-950 space-y-4">
+        <div class="h-64 rounded-2xl overflow-hidden bg-emerald-950/40">
+          <img src="https://images.unsplash.com/photo-1577937927133-66ef06acdf18?auto=format&fit=crop&w=600&q=80" alt="Magnesium Complex" class="w-full h-full object-cover">
+        </div>
+        <div class="flex justify-between items-baseline">
+          <h3 class="text-lg font-bold">Deep Glycinate Magnesium</h3>
+          <span class="font-mono text-emerald-400 font-bold">$34.00</span>
+        </div>
+        <p class="text-xs text-emerald-300/70">Chelated high-absorption elemental magnesium for neurotransmitter calm.</p>
+        <button onclick="alert('Added Magnesium to cart!')" class="w-full py-2.5 rounded-xl border border-emerald-800 hover:bg-emerald-800/40 text-xs font-bold uppercase transition">Add to Order</button>
+      </div>
+    </div>
+  </section>
+
+  <footer class="border-t border-emerald-950 py-12 text-center text-xs text-emerald-500/60">
+    <p>© 2026 Verdant Botanicals Inc. Third-party verified cGMP facility.</p>
+  </footer>
+
+  <script>
+    lucide.createIcons();
+
+    const quizData = {
+      energy: {
+        title: 'Verdant Mitochondrial Surge™',
+        tag: 'Recommended: ATP & Endurance Focus',
+        price: '$48 / mo',
+        desc: 'Standardized Cordyceps Sinensis (CS-4), organic Rhodiola Rosea (3% salidrosides), and CoQ10 liposomal delivery system.'
+      },
+      sleep: {
+        title: 'Verdant Somna Deep REM™',
+        tag: 'Recommended: Circadian Architecture',
+        price: '$44 / mo',
+        desc: 'Tart cherry phytomelatonin, L-Theanine, Apigenin (98% pure chamomile extract), and chelated magnesium bisglycinate.'
+      },
+      focus: {
+        title: 'Verdant Synapse Nootropic™',
+        tag: 'Recommended: Neuroplasticity & Recall',
+        price: '$52 / mo',
+        desc: 'High-potency organic Lion’s Mane fruiting bodies (standardized erinacines), Bacopa Monnieri 50%, and Cognizin® Citicoline.'
+      },
+      immunity: {
+        title: 'Verdant Immunoshield 360™',
+        tag: 'Recommended: Innate Cellular Defense',
+        price: '$40 / mo',
+        desc: 'Wild-harvested Siberian Chaga, Black Elderberry extract (64:1), liposomal Zinc picolinate, and Vitamin D3 + K2.'
+      }
+    };
+
+    function setQuizGoal(goal) {
+      document.querySelectorAll('.quiz-btn').forEach(b => {
+        b.className = 'quiz-btn p-4 rounded-2xl border border-emerald-900 bg-emerald-950/50 text-emerald-300/60 text-xs font-bold flex flex-col items-center gap-2 transition';
+      });
+      const active = document.getElementById('q-' + goal);
+      active.className = 'quiz-btn p-4 rounded-2xl border border-emerald-500 bg-emerald-500/20 text-emerald-300 text-xs font-bold flex flex-col items-center gap-2 transition';
+
+      const data = quizData[goal];
+      document.getElementById('resTitle').textContent = data.title;
+      document.getElementById('resTag').textContent = data.tag;
+      document.getElementById('resPrice').textContent = data.price;
+      document.getElementById('resDesc').textContent = data.desc;
+    }
+  </script>
+</body>
+</html>
